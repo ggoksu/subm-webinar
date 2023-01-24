@@ -8,8 +8,8 @@ data:
   REPMGR_NODE_NAME: pg-0
   POSTGRESQL_DATABASE: database
   POSTGRESQL_PASSWORD: password
-  REPMGR_PRIMARY_HOST: pg-0
-  REPMGR_NODE_NETWORK_NAME: pg-0
+  REPMGR_PRIMARY_HOST: cluster2.pg-0.demo.svc.clusterset.local
+  REPMGR_NODE_NETWORK_NAME: pg-0.demo.svc.clusterset.local
   POSTGRESQL_POSTGRES_PASSWORD: password
   REPMGR_PARTNER_NODES: "pg-0,pg-1"
   REPMGR_PASSWORD: repmgrpass
