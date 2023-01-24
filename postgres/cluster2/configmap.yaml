@@ -5,7 +5,7 @@ metadata:
   namespace: demo
 data:
   POSTGRESQL_USERNAME: user
-  REPMGR_NODE_NAME: pg-0
+  REPMGR_NODE_NAME: cluster2.pg-0.demo.svc.clusterset.local
   POSTGRESQL_DATABASE: database
   POSTGRESQL_PASSWORD: password
   REPMGR_PRIMARY_HOST: cluster2.pg-0.demo.svc.clusterset.local
