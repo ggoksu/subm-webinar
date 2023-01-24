@@ -1,0 +1,7 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgre-0
+spec:
+  type: ExternalName
+  externalName: postgre-0.demo.svc.clusterset.local

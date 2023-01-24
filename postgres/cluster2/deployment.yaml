@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pg0
+  name: postgre-0
   namespace: demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pg0
+      app: postgre-0
   template:
     metadata:
       labels:
-        app: pg0
-        deployment: pg0
+        app: postgre-0
+        deployment: postgre-0
     spec:
       containers:
-        - name: pg0
+        - name: postgre-0
           image: >-
             image-registry.openshift-image-registry.svc:5000/demo/pg:latest
           ports:
@@ -23,7 +23,7 @@ spec:
               protocol: TCP
           envFrom:
             - configMapRef:
-                name: pg0
+                name: postgre-0
           resources: {}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30

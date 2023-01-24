@@ -1,16 +1,15 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: pg0
+  name: postgre-0
   namespace: demo
 data:
-  REPMGR_NODE_ID: "0"
   POSTGRESQL_USERNAME: user
-  REPMGR_NODE_NAME: cluster2.pg0.demo.svc.clusterset.local
+  REPMGR_NODE_NAME: postgre-0
   POSTGRESQL_DATABASE: database
   POSTGRESQL_PASSWORD: password
-  REPMGR_PRIMARY_HOST: cluster2.pg0.demo.svc.clusterset.local
-  REPMGR_NODE_NETWORK_NAME: pg0.demo.svc.clusterset.local
+  REPMGR_PRIMARY_HOST: postgre-0
+  REPMGR_NODE_NETWORK_NAME: postgre-0
   POSTGRESQL_POSTGRES_PASSWORD: password
-  REPMGR_PARTNER_NODES: "pg0,pg1"
+  REPMGR_PARTNER_NODES: "postgre-0,postgre-1"
   REPMGR_PASSWORD: repmgrpass

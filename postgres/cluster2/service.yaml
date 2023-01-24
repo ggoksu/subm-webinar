@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: pg0
+  name: postgre-0
   namespace: demo
 spec:
   ports:
@@ -12,5 +12,5 @@ spec:
   internalTrafficPolicy: Cluster
   type: ClusterIP
   selector:
-    app: pg0
-    deployment: pg0
+    app: postgre-0
+    deployment: postgre-0
