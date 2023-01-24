@@ -1,9 +1,10 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: StatefulSet
 metadata:
   name: pg-1
   namespace: demo
 spec:
+  serviceName: pg-1
   replicas: 1
   selector:
     matchLabels:
@@ -40,3 +41,13 @@ spec:
       maxSurge: 25%
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
+  volumeClaimTemplates:
+    - metadata:
+        name: www
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: my-storage-class
+        resources:
+          requests:
+            storage: 1Gi
