@@ -12,5 +12,5 @@ data:
   REPMGR_PRIMARY_HOST: pg-0.demo.svc.clusterset.local
   REPMGR_NODE_NETWORK_NAME: pg-0.demo.svc.clusterset.local
   POSTGRESQL_POSTGRES_PASSWORD: password
-  REPMGR_PARTNER_NODES: "pg-0.demo.svc.clusterset.local,pg-1.demo.svc.clusterset.local"
+  REPMGR_PARTNER_NODES: "pg-0,pg-1"
   REPMGR_PASSWORD: repmgrpass
