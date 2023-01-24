@@ -1,31 +1,32 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
-  name: pg-0
+  name: pg-1
   namespace: demo
 spec:
-  serviceName: pg-0
   replicas: 1
   selector:
     matchLabels:
-      app: pg-0
+      app: pg-1
   template:
     metadata:
       labels:
-        app: pg-0
-        deployment: pg-0
+        app: pg-1
+        deployment: pg-1
     spec:
       containers:
-        - name: pg-0
+        - name: pg-1
           image: >-
             image-registry.openshift-image-registry.svc:5000/demo/pg:latest
           ports:
             - containerPort: 5432
               protocol: TCP
-          envFrom:
-            - configMapRef:
-                name: pg-0
           resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
