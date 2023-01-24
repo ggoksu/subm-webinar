@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: pg-1
+  name: pg1
   namespace: demo
 spec:
   ports:
@@ -12,5 +12,5 @@ spec:
   internalTrafficPolicy: Cluster
   type: ClusterIP
   selector:
-    app: pg-1
-    deployment: pg-1
+    app: pg1
+    deployment: pg1
