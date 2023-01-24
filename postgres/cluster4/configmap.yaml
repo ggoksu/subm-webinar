@@ -4,6 +4,7 @@ metadata:
   name: pg1
   namespace: demo
 data:
+  REPMGR_NODE_ID: 1
   POSTGRESQL_USERNAME: user
   REPMGR_NODE_NAME: cluster4.pg1.demo.svc.clusterset.local
   POSTGRESQL_DATABASE: database
